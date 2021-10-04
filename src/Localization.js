@@ -17,8 +17,8 @@ const Localication = () => {
       title={t('language')}
       onSelect={handleInput}
     >
-      <NavDropdown.Item eventKey="en" >English</NavDropdown.Item>
-      <NavDropdown.Item eventKey="tr" >Türkçe</NavDropdown.Item>
+      <NavDropdown.Item eventKey="TR" >Türkçe</NavDropdown.Item>
+      <NavDropdown.Item eventKey="EN" >English</NavDropdown.Item>
     </NavDropdown>
   )
 }

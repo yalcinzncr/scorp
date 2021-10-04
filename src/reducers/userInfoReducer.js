@@ -1,4 +1,5 @@
 import produce from 'immer';
+import {OPEN_USER_INFO} from '../constants/constants.js'
 
 export const initialState = {
     userInfoForm: {
@@ -11,7 +12,7 @@ export default (state = initialState, action) =>
   produce(state, draft => {
     const drafted = draft;
     switch (action.type) {
-        case 'OPEN_USER_INFO':  {
+        case OPEN_USER_INFO:  {
             drafted.userInfoForm = action.data;
             return drafted;
         }

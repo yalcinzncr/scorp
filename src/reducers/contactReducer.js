@@ -1,12 +1,14 @@
 import produce from 'immer';
-import {USER_LOGIN, CLEAR_USER_FORM_ACTION} from '../constants/constants.js'
+import {CONTACT_USER_SUBMIT} from '../constants/constants.js'
 
 export const initialState = {
-    userForm: {
+    contactUserForm: {
         name: '', 
         email : '' , 
-        password : '', 
-        isOpen: false,
+        phoneNumber : '',
+        country : 'TR',
+        text : ''
+
     }
   };
   
@@ -15,15 +17,10 @@ export default (state = initialState, action) =>
   produce(state, draft => {
     const drafted = draft;
     switch (action.type) {
-        case 'USER_LOGIN':  {
-            drafted.userForm = action.data;
+        case CONTACT_USER_SUBMIT:  {
+            drafted.contactUserForm = action.data;
             return drafted;
-        }
-
-        case 'CLEAR_USER_FORM_ACTION':  {
-          return initialState;
-        }
-        
+        }        
         default:
             return state
     }

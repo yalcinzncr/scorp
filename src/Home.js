@@ -8,7 +8,7 @@ class Home extends Component {
 
   componentDidMount(){
     let tmpGlobalStates = this.props.appAction.globalStates;
-    tmpGlobalStates = { ...tmpGlobalStates, pageName : "Home" };
+    tmpGlobalStates = { ...tmpGlobalStates, pageName : "home" };
     this.props.changePageNameAction(tmpGlobalStates);
   }
   render() {

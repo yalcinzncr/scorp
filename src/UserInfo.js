@@ -5,7 +5,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { openUserInfo } from './actions/userInfoModalAction';
 import { isUserOpenAction } from './actions/appAction';
-import { loginAction } from './actions/userLoginAction';
+import { loginAction, clearUserFormAction } from './actions/userLoginAction';
 import { withTranslation } from 'react-i18next';
 
 class ModalForm extends React.Component {
@@ -16,6 +16,7 @@ class ModalForm extends React.Component {
     let tmpGlobalState = this.props.appAction;
     tmpGlobalState = { ...tmpGlobalState, isUserLogin: false };
     this.props.isUserOpenAction(tmpGlobalState);
+    this.props.clearUserFormAction();
     this.handleClose();
   }
 
@@ -71,4 +72,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { openUserInfo, isUserOpenAction, loginAction })(withTranslation()(ModalForm));
+export default connect(mapStateToProps, { openUserInfo, isUserOpenAction, loginAction, clearUserFormAction })(withTranslation()(ModalForm));

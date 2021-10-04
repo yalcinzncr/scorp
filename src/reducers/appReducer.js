@@ -1,9 +1,10 @@
 import produce from 'immer';
+import {IS_USER_OPEN, CHANGE_PAGE_NAME} from '../constants/constants.js'
 
 export const initialGlobalState = {
     globalStates: {
       isUserLogin: false,
-      pageName : "Home"
+      pageName : "home"
     }
   };
   
@@ -12,11 +13,11 @@ export default (state = initialGlobalState, action) =>
   produce(state, draft => {
     const drafted = draft;
     switch (action.type) { 
-        case 'IS_USER_OPEN':  {
+        case IS_USER_OPEN:  {
             drafted.globalStates.isUserLogin = action.data.isUserLogin;
             return drafted;
         }   
-        case 'CHANGE_PAGE_NAME':  {
+        case CHANGE_PAGE_NAME:  {
           drafted.globalStates.pageName = action.data.pageName;
           return drafted;
       } 

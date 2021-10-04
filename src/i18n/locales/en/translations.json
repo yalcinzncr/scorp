@@ -7,5 +7,13 @@
   "footer"  : "All rights belong to Scorp company",
   "language" : "Language",
   "user-info" : "User Info",
-  "login" : "Login"
+  "login" : "Login",
+  "contact-name" : "Name",
+  "contact-email" : "Email",
+  "contact-phone-number" : "Phone Number",
+  "contact-country-list" : "Country List",
+  "contact-text" : "Text",
+  "contact-submit-button" : "Submit",
+  "home-page" : "Home"
+
 }

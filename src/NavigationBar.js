@@ -22,7 +22,7 @@ class NavigationBar extends Component  {
                         <img src={loveLogo} width="60" height="40" className="d-inline-block align-top" alt="React Bootstrap logo"/>
                         </Navbar.Brand>
                         <Navbar.Brand>
-                          <p>{this.props.appAction.globalStates.pageName}</p>
+                          <p>{t(this.props.appAction.globalStates.pageName)}</p>
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">

@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { loginAction } from './actions/userLoginAction';
 import { isUserOpenAction } from './actions/appAction';
 import { withTranslation } from 'react-i18next';
+import { contactAction } from './actions/contactAction';
 
 class ModalForm extends React.Component {
 
@@ -13,6 +14,13 @@ class ModalForm extends React.Component {
     let tmpUserFormData = this.props.userLogin.userForm;
     tmpUserFormData = { ...tmpUserFormData, isOpen: true };
     this.props.loginAction(tmpUserFormData);
+
+    // contact form name and email update when user login
+    
+    let tmpContactUserFormData = this.props.contactUser.contactUserForm;
+    tmpContactUserFormData = { ...tmpContactUserFormData, name : this.props.userLogin.userForm.name };
+    tmpContactUserFormData = { ...tmpContactUserFormData, email : this.props.userLogin.userForm.email };
+    this.props.contactAction(tmpContactUserFormData);
 
     let tmpGlobalState = this.props.appAction;
     tmpGlobalState = { ...tmpGlobalState, isUserLogin: true };
@@ -84,8 +92,9 @@ class ModalForm extends React.Component {
 const mapStateToProps = state => {
   return {
     userLogin: state.userLogin,
+    contactUser : state.contactUser,
     appAction: state.appAction
   }
 }
 
-export default connect(mapStateToProps, { loginAction, isUserOpenAction  })(withTranslation()(ModalForm));
+export default connect(mapStateToProps, { loginAction, isUserOpenAction, contactAction  })(withTranslation()(ModalForm));

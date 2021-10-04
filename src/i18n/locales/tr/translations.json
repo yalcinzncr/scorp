@@ -7,5 +7,12 @@
   "footer" : "Tüm hakkı scorp şirketine aittir",
   "language" : "Dil",
   "user-info" : "Kullanıcı",
-  "login" : "Giriş Yap"
+  "login" : "Giriş Yap",
+  "contact-name" : "İsim",
+  "contact-email" : "Email",
+  "contact-phone-number" : "Telefon Numarası",
+  "contact-country-list" : "Ülke Listesi",
+  "contact-text" : "Metin",
+  "contact-submit-button" : "Gönder",
+  "home-page" : "Ana Sayfa"
 }

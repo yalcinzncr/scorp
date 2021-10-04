@@ -6,6 +6,7 @@
 - Hot Module Replacement
 - Bootstrap
 - react-i18next
+- validator
 
 ## Config files
 -package.json
@@ -20,10 +21,6 @@
 - npm start
 - visit 'http://localhost:8080/'
 
-
-## Skipped Features (I was a little busy this week, I couldn't make it)
-- Contact Us Page  
-- Mobile Navigation Bar
 
 ## Notes
 index.html file in dist folder
