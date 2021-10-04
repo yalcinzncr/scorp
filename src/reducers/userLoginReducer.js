@@ -15,12 +15,12 @@ export default (state = initialState, action) =>
   produce(state, draft => {
     const drafted = draft;
     switch (action.type) {
-        case 'USER_LOGIN':  {
+        case USER_LOGIN:  {
             drafted.userForm = action.data;
             return drafted;
         }
 
-        case 'CLEAR_USER_FORM_ACTION':  {
+        case CLEAR_USER_FORM_ACTION:  {
           return initialState;
         }
         
